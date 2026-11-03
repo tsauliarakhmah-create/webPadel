@@ -6,7 +6,7 @@ export default function Hero() {
     <section id="lapangan" className="px-5 pb-5 md:px-8 md:pb-8">
       <div className="relative flex min-h-120 flex-col items-center justify-center overflow-hidden rounded-3xl px-6 py-12 text-center text-white md:min-h-160">
         <Image
-          src="/images/hero.jpg"
+          src="/Images/hero.jpg"
           alt="Lapangan padel indoor dengan dinding kaca"
           fill
           priority
