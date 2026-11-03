@@ -15,6 +15,14 @@ export async function POST(request) {
   const whatsapp = String(body.whatsapp ?? "").replace(/\D/g, "");
   const tanggal = String(body.tanggal ?? "");
   const sesi = String(body.sesi ?? "");
+  const today = new Date().toISOString().slice(0, 10);
+
+  if (tanggal < today) {
+    return Response.json(
+      { message: "Tanggal booking tidak boleh di masa lalu." },
+      { status: 400 }
+    );
+  }
 
   if (nama.length < 2) {
     return Response.json({ error: "Nama minimal 2 huruf" }, { status: 400 });
