@@ -19,7 +19,7 @@ export async function POST(request) {
 
   if (tanggal < today) {
     return Response.json(
-      { message: "Tanggal booking tidak boleh di masa lalu." },
+      { error: "Tanggal booking tidak boleh di masa lalu." },
       { status: 400 }
     );
   }
